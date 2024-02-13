@@ -32,10 +32,9 @@ const GenreLink = ({ item, index }) => {
   };
 
   return (
-    <NavLink to={getGenreLink(item.genre)}>
-      <div className={ClassName} style={{ backgroundImage: `url(${item.img_url})` }}>
-        <p>{item.genre}</p>
-      </div>
+    <NavLink to={getGenreLink(item.genre)} className="genrelink-container-kjh">
+      <img className={ClassName} src={item.img_url} alt="장르별 보기" />
+      <p className='genrelink-text-kjh'>{item.genre}</p>
     </NavLink>
   );
 };
