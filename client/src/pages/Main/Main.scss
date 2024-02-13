@@ -302,6 +302,7 @@
           height: auto;
           padding: 0 20px;
           box-sizing: border-box;
+          position: relative;
   
   
           .main-bottom-fullbooktop-lhs{
@@ -335,30 +336,39 @@
             .main-bottom-sf-lhs {
               width: 100%;
               margin-bottom: 30px;
-              padding: 30px;
+              // padding: 30px;
               box-sizing: border-box;
               background-size: 100% 100%;
               color: #fff;
               position: relative;
               overflow: hidden; /* 이미지를 부모 요소의 영역 안에 가두기 위해 추가 */
-        
-              p {
-                font-size: 25px;
-                font-weight: 900;
-                line-height: 1.6;
-                position: relative;
-                z-index: 1; /* 이미지 위에 텍스트를 표시하기 위해 z-index 설정 */
-                transition: transform 1s ease; /* 이미지 축소 효과에 대한 transition 추가 */
-              }
             }
           }
         
-          .main-bottom-dark2-lhs > p {
-            float: left;
+          .main-bottom-dark2-lhs ~ p {
+            position: absolute;
+            top: calc(50% - 30px);
+            left: 60px;
+            margin: 0;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 900;
+            line-height: 1.6;
+            z-index: 1; /* 이미지 위에 텍스트를 표시하기 위해 z-index 설정 */
+            transition: transform 1s ease; /* 이미지 축소 효과에 대한 transition 추가 */
           }
         
-          .main-bottom-sf-lhs > p {
-            float: right;
+          .main-bottom-sf-lhs ~ p {
+            position: absolute;
+            top: calc(50% - 30px);
+            right: 60px;
+            margin: 0;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 900;
+            line-height: 1.6;
+            z-index: 1; /* 이미지 위에 텍스트를 표시하기 위해 z-index 설정 */
+            transition: transform 1s ease; /* 이미지 축소 효과에 대한 transition 추가 */
           }
   
           .main-bottom-fullbook-lhs::before,
@@ -380,42 +390,6 @@
           .main-bottom-fullbook-lhs::before {
             background: url('../../../public/images/main/fullbook.png') center/cover; /* dark 이미지 경로 */
           }
-        
-          // .main-bottom-dark2-lhs::before {
-          //   background: url('../../../public/images/main/horro.png') center/cover; /* dark 이미지 경로 */
-          //   border-radius: 0 30px 30px 0;
-          // }
-  
-          // .main-bottom-fantsymain-lhs::before{
-          //   background: url('../../../public/images/main/fantasymain.png') center/cover; /* dark 이미지 경로 */
-          //   border-radius: 0 30px 30px 0;
-          // }
-  
-          // .main-bottom-mystery-lhs::before{
-          //   background: url('../../../public/images/main/mystery.png') center/cover; /* dark 이미지 경로 */
-          //   border-radius: 0 30px 30px 0;
-          // }
-        
-          // .main-bottom-sf-lhs::before {
-          //   background: url('../../../public/images/main/sf.png') center/cover; /* sf 이미지 경로 */
-          //   border-radius: 30px 0 0 30px;
-          // }
-  
-          // .main-bottom-comic-lhs::before{
-          //   background: url('../../../public/images/main/comic.png') center/cover; /* dark 이미지 경로 */
-          //   border-radius: 30px 0 0 30px;
-          // }
-  
-          // .main-bottom-thiller-lhs::before {
-          //   background: url('../../../public/images/main/thiller.png') center/cover; /* sf 이미지 경로 */
-          //   border-radius: 30px 0 0 30px;
-          // }
-        
-          // .main-bottom-fullbook-lhs:hover::before,
-          // .main-bottom-sf-lhs:hover::before,
-          // .main-bottom-dark2-lhs:hover::before {
-          //   transform: scale(1.5); /* 이미지 축소 효과 적용 */
-          // }
         }
       }
   
@@ -430,6 +404,17 @@
   }      
 } 
 
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
 /* 모바일 화면 크기 범위에 대한 스타일 */
 @media all and (max-width:799px){
   .main-container-lhs {
@@ -709,7 +694,7 @@
         opacity: 0;
         transform: translateY(-20px);
         transition: opacity 1s, transform 1s;
-        display: grid;
+        // display: grid;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
@@ -721,10 +706,11 @@
         }
       
         .main-bottom-container-lhs {
-          // width: 100%;
+          width: 100%;
           height: auto;
           padding: 0 5px;
           box-sizing: border-box;
+          position: relative;
   
   
           .main-bottom-fullbooktop-lhs{
@@ -762,17 +748,44 @@
               position: relative;
               overflow: hidden; /* 이미지를 부모 요소의 영역 안에 가두기 위해 추가 */
         
-              p {
-                font-size: 20px;
-                font-weight: 900;
-                line-height: 1.6;
-                position: relative;
-                z-index: 1; /* 이미지 위에 텍스트를 표시하기 위해 z-index 설정 */
-                transition: transform 1s ease; /* 이미지 축소 효과에 대한 transition 추가 */
-              }
+              // p {
+              //   font-size: 20px;
+              //   font-weight: 900;
+              //   line-height: 1.6;
+              //   position: relative;
+              //   z-index: 1; /* 이미지 위에 텍스트를 표시하기 위해 z-index 설정 */
+              //   transition: transform 1s ease; /* 이미지 축소 효과에 대한 transition 추가 */
+              // }
             }
           }
+
+          .main-bottom-dark2-lhs ~ p {
+            position: absolute;
+            top: calc(50% - 30px);
+            left: 60px;
+            margin: 0;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 900;
+            line-height: 1.6;
+            z-index: 1; /* 이미지 위에 텍스트를 표시하기 위해 z-index 설정 */
+            transition: transform 1s ease; /* 이미지 축소 효과에 대한 transition 추가 */
+          }
         
+          .main-bottom-sf-lhs ~ p {
+            position: absolute;
+            top: calc(50% - 30px);
+            right: 60px;
+            margin: 0;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 900;
+            line-height: 1.6;
+            z-index: 1; /* 이미지 위에 텍스트를 표시하기 위해 z-index 설정 */
+            transition: transform 1s ease; /* 이미지 축소 효과에 대한 transition 추가 */
+          }
+        
+          
           .main-bottom-dark2-lhs > p {
             float: left;
           }
